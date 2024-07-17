@@ -1,0 +1,38 @@
+.banner-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+  }
+  
+  .tech-stack {
+    flex: 1;
+  }
+  
+  .image-container {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+    margin-top: 20px; /* Adjust spacing as needed */
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    .tech-stack-container {
+      flex-direction: column;
+    }
+  }
+  

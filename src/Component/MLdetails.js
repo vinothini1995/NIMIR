@@ -28,28 +28,17 @@ const Container = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  
+  @media(min-width:375px){
+  width:400px;
+   }
+    @media(min-width:768px){
+    width:100vw;
+
+}
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: auto;
 
 
-  @media (max-width: ${breakpoints.mobileS}) {
-  
-    height: 30vh;
-  }
-  @media (max-width: ${breakpoints.mobileM}) {
-    height: 35vh;
-  }
-  @media (max-width: ${breakpoints.mobileL}) {
-    height: 40vh;
-  }
-  @media (max-width: ${breakpoints.tablet}) {
-    height: 45vh;
-  }
-`;
 
 const TextOverlay = styled.div`
   position: absolute;
@@ -64,6 +53,28 @@ const TextOverlay = styled.div`
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.5);
+
+  @media (max-width:320px)
+   {
+    color:white;
+    text-align:justify;
+    // margin-right:9px;
+    padding:20px;
+  }
+    @media(min-width:375px){
+    color:white;
+   padding:30px;
+   text-align:justify;
+    }
+   @media(min-width:768px){
+   color:white;
+   }
+  @media(min-width:1024px){
+  color:white;
+  }
+  @media(min-width:1440px){
+  color:white;
+  }
 `;
 
 const Title = styled.h1`
@@ -95,6 +106,10 @@ const Section = styled.div`
   align-items: flex-start;
   margin-bottom: 20px;
   padding: 0 20px; /* Add left and right padding */
+
+
+  
+ 
 `;
 
 const Icon = styled(FontAwesomeIcon)`
@@ -124,8 +139,8 @@ const Text = styled.p`
   text-align:justify;
 
   @media(max-width:${breakpoints.mobileS}){
-  text-align:justify;
-  color:blue;
+  text-align:center;
+  
   
   
   }
@@ -189,50 +204,88 @@ const LastSec = styled.div`
     z-index: 2;
   }
 `;
-const SolutionSection = styled.div`
-  margin: 20px 0 0px 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  width:550px;
-  &:hover {
-    transform: translateY(-30px);
+const ResponsiveContainer = styled.div`
+  .row {
+    margin-top: 20px;
   }
-     @media (max-width: ${breakpoints.mobileS}) {
   
-  width:100vw;
+  @media (max-width: 768px) {
+    .row {
+      margin-top: 15px;
+    }
   }
-    @media (max-width: ${breakpoints.mobileM}) {
-  
-  width:100vw;
-  }
- 
+
+  @media (max-width: 576px) {
+    .row {
+      margin-top: 10px;
+    }
     
+    h1 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .row {
+      margin-top: 5px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    .col-md-6 {
+      width: 100%;
+      padding: 0;
+    }
+
+    .container {
+      padding: 0 15px;
+    }
+  }
 `;
 
-const SolutionHeading = styled.h5`
-  margin: 0 0 10px;
-  font-size: 20px;
-  color: #333;
-    @media (max-width: ${breakpoints.mobileS}) {
-  
-  width:100vw;
+const SolutionSection = styled.div`
+  margin-bottom: 20px;
+
+  @media (max-width: 576px) {
+    margin-bottom: 15px;
+  }
+`;
+
+const SolutionHeading = styled.h2`
+  font-size: 24px;
+  margin-bottom: 10px;
+
+  @media (max-width: 576px) {
+    font-size: 20px;
   }
 `;
 
 const SolutionText = styled.p`
-  margin: 0;
   font-size: 16px;
-  color: #666;
-  line-height: 1.6;
+  margin-bottom: 15px;
   text-align:justify;
-     @media(max-width:320){
-    color:red;
-    background-color:blue;
-    }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
+
+const Image = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
+
+
 
 const Content1 = styled.div`
   display: flex;
@@ -301,11 +354,7 @@ const Image1 = styled.img`
     position:relative;
   }
 `;
-const ResponsiveContainer = styled.div`
-  .row {
-    margin-top: 20px;
-  }
-  `;
+
 
 
 
